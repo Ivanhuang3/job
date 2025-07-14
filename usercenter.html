@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>會員中心 - 食力派ChowCrew</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/navforaboutus.css">
+  <link rel="stylesheet" href="css/login-modal.css">
+  <link rel="stylesheet" href="css/userCenter.css">
+  <link rel="stylesheet" href="css/experienceList.css">
+  <!-- 添加餐廳卡片相關的樣式 -->
+  <link rel="stylesheet" href="css/food-categories.css">
+  <link rel="stylesheet" href="css/restaurant-card-v3.css">
+  <link rel="stylesheet" href="css/favoritesStyle.css">
+  <link rel="stylesheet" href="css/business-hours.css">
+  <link rel="stylesheet" href="css/modal-fix.css">
+  <link rel="stylesheet" href="css/restaurant-modal.css">
+  <link rel="stylesheet" href="css/restaurant-modal-new.css">
+
+<!--  初始化用戶中心 -->
+  <script>
+  if (typeof initializeUserCenter === 'function') {
+    initializeUserCenter();
+  }
+</script>
+<!-- 主要內容區域 -->
+<div class="main-content">
+    <!-- 個人資料區塊 -->
+    <section id="profile" class="content-section active">
+      <h2>個人資料</h2>
+      <form id="profileForm" class="form" onsubmit="return false;">
+        <div class="form-group">
+          <label for="name">姓名</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">電子郵件</label>
+          <input type="email" id="email" name="email" readonly>
+        </div>
+        <div class="form-group">
+          <label for="phone">電話</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="form-group">
+          <label for="address">地址</label>
+          <input type="text" id="address" name="address">
+        </div>
+        <button type="button" class="btn-primary update-profile-btn" onclick="updateProfile()">更新資料</button>
+      </form>
+    </section>
+
+    <script src="js/usercenter.js"></script>
